@@ -4,3 +4,14 @@ duckduckgo-search
 openai
 groq
 python-dotenv
+aioice
+wave
+openai-whisper
+torch
+torchvision
+gtts
+numpy
+pydub
+pytesseract
+streamlit_webrtc
+numpy
