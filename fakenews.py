@@ -11,22 +11,15 @@ import tempfile
 import os
 import subprocess
 import whisper
-
 import wave
-import whisper
-from streamlit_webrtc import webrtc_streamer 
 import av 
 import numpy as np
 import os
 
-
-import os
-
-# Add FFmpeg to PATH in runtime
 os.environ["PATH"] += os.pathsep + r"C:\ffmpeg\bin"
 
 # Test if FFmpeg works
-os.system("ffmpeg -version")
+# os.system("ffmpeg -version")
 
 
 import json
@@ -187,6 +180,7 @@ if option == "Upload image to detect":
     if uploaded_file is not None:
         text = recText(uploaded_file)
         if st.button("Detect"):
+            st.image(uploaded_file)
             with st.spinner("Analyzing the image to...🕵️"):
                 result = obj.Fake_news_Agent(text)
                 output_file = text_to_speech(result.content)
